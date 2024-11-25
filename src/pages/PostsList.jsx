@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react"
 export default function PostList() {
 
-    //const [postsData, setPostsData] = useState(initialPostsData)
     const [posts, setPosts] = useState([])
 
 
