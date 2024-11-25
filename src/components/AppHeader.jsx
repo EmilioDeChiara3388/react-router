@@ -7,9 +7,7 @@ export default function AppHeader() {
             <div>
                 <h1>My Blog</h1>
             </div>
-
             <MainMenu />
-
         </header>
     )
 }

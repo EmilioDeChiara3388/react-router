@@ -6,7 +6,7 @@ export default function DefaultLayout() {
     return (
         <>
             <AppHeader />
-            <main>
+            <main className="py-5 bg-light">
                 <Outlet />
             </main>
             <AppFooter />

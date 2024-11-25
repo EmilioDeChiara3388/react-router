@@ -4,7 +4,6 @@ export default function AppFooter() {
             <footer>
                 <p>2024 Tutti i diritti riservati</p>
             </footer>
-
         </>
     )
 }

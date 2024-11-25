@@ -9,7 +9,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    margin-bottom: 2rem;
     background-color: aqua;
 
     nav {
@@ -24,18 +23,11 @@ header {
                 color: red;
             }
         }
-
-
     }
 }
 
 main {
-    height: 500px;
-}
-
-.container {
-    width: 80%;
-    margin: auto;
+    min-height: 500px;
 }
 
 footer {
