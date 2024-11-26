@@ -1,16 +1,22 @@
-import { useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"
 
 export default function SinglePost() {
 
     const { slug } = useParams()
     const [post, setPost] = useState(null)
+    const navigate = useNavigate()
 
     useEffect(() => {
         fetch(`http://127.0.0.1:3000/posts/${slug}`)
             .then(resp => resp.json())
             .then(data => {
-                setPost(data.data)
+                const keys = Object.keys(data)
+                if (keys.includes('error')) {
+                    navigate('/404')
+                } else {
+                    setPost(data.data)
+                }
             })
             .catch(err => {
                 console.log(err);

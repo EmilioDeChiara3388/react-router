@@ -3,6 +3,7 @@ import Home from "./pages/Home"
 import About from "./pages/About"
 import PostsList from "./pages/PostsList"
 import SinglePost from "./pages/SinglePost"
+import NotFound from './pages/NotFound'
 import DefaultLayout from './pages/DefaultLayout'
 
 
@@ -19,7 +20,7 @@ function App() {
               <Route index element={<PostsList />} />
               <Route path=':slug' element={<SinglePost />} />
             </Route>
-
+            <Route path='*' element={<NotFound />}></Route>
           </Route>
         </Routes>
       </BrowserRouter>
