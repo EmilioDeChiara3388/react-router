@@ -22,13 +22,15 @@ export default function SinglePost() {
         <>
             {post ? (
                 <section>
-                    <div className="container text-center">
-                        <h1>{post.title}</h1>
-                        <div className="card">
-                            <div>
-                                <img src={`http://localhost:3000/imgs/posts/${post.image}`} alt="" />
+                    <div className="container">
+                        <div className="text-center mb-5">
+                            <h1>{post.title}</h1>
+                        </div>
+                        <div className="row align-items-center justify-content-around p-2">
+                            <div className="col">
+                                <img width={360} height={330} className='object-fit-cover card-img-top' src={`http://localhost:3000/imgs/posts/${post.image}`} alt="" />
                             </div>
-                            <div>
+                            <div className="col">
                                 <p>{post.content}</p>
                             </div>
                         </div>
