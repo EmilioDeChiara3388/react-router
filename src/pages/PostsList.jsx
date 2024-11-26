@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
 export default function PostList() {
 
     const [posts, setPosts] = useState([])
@@ -23,7 +24,9 @@ export default function PostList() {
                                 posts.data.map(post => (
                                     <div className="col" key={post.slug}  >
                                         <div className="card border border-danger" >
-                                            <img className='rounded' src={'http://localhost:3000/imgs/posts/' + post.image} alt="" />
+                                            <Link to={`/posts/${post.slug}`}>
+                                                <img className='rounded-top object-fit-cover card-img-top' src={'http://localhost:3000/imgs/posts/' + post.image} alt="" />
+                                            </Link>
                                             <div className='d-flex justify-content-between align-items-center'>
                                                 <div>
                                                     <p className='m-2'> {post.title} </p>
