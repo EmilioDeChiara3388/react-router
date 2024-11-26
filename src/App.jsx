@@ -14,7 +14,10 @@ function App() {
           <Route element={<DefaultLayout />}>
             <Route index element={<Home />} />
             <Route path='/about' element={<About />} />
-            <Route path='/posts-list' element={<PostsList />} />
+            <Route path='/posts'>
+              <Route index element={<PostsList />} />
+            </Route>
+
           </Route>
         </Routes>
       </BrowserRouter>
