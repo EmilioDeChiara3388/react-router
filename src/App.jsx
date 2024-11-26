@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from "./pages/Home"
 import About from "./pages/About"
 import PostsList from "./pages/PostsList"
+import SinglePost from "./pages/SinglePost"
 import DefaultLayout from './pages/DefaultLayout'
 
 
@@ -16,6 +17,7 @@ function App() {
             <Route path='/about' element={<About />} />
             <Route path='/posts'>
               <Route index element={<PostsList />} />
+              <Route path=':slug' element={<SinglePost />} />
             </Route>
 
           </Route>
